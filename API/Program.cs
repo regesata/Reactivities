@@ -13,6 +13,13 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlServer(connection);
 });
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+    });
+});
 
 
 var app = builder.Build();
@@ -23,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 // Configure the HTTP request pipeline.
+
+app.UseCors("CorsPolicy"); 
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
