@@ -10,4 +10,10 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="public\assets\" />
+    <Folder Include="src\features\activities\dashboard\" />
+    <Folder Include="src\features\activities\details\" />
+    <Folder Include="src\features\activities\form\" />
+  </ItemGroup>
 </Project>
