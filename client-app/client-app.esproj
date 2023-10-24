@@ -12,6 +12,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="public\assets\" />
+    <Folder Include="src\app\stores\" />
     <Folder Include="src\features\activities\dashboard\" />
     <Folder Include="src\features\activities\details\" />
     <Folder Include="src\features\activities\form\" />
